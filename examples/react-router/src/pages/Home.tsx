@@ -17,7 +17,7 @@ export default () => {
     <div>
       <div>User is {!keycloak?.authenticated ? 'NOT ' : ''} authenticated</div>
 
-      {!!keycloak?.authenticated && (
+      {keycloak?.authenticated && (
         <button type="button" onClick={() => keycloak.logout()}>
           Logout
         </button>
